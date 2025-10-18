@@ -164,6 +164,7 @@ ZwAcquireCrossVmMutant(
     _In_ PLARGE_INTEGER Timeout
     );
 
+#if (PHNT_VERSION >= PHNT_WINDOWS_10_RS2)
 NTSYSCALLAPI
 NTSTATUS
 NTAPI
@@ -172,6 +173,7 @@ ZwAcquireProcessActivityReference(
     _In_ HANDLE ParentProcessHandle,
     _Reserved_ PROCESS_ACTIVITY_TYPE Reserved
     );
+#endif
 
 NTSYSCALLAPI
 NTSTATUS
